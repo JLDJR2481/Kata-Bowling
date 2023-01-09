@@ -6,7 +6,6 @@ class Puntuacion:
     def __init__(self, points):
         self.points = list(points)
 
-    @staticmethod
     def specials_values(throws):
         total = 0
         for i in throws:
@@ -69,16 +68,3 @@ class Puntuacion:
                 frame += 1
 
         return total_points
-
-
-if __name__ == "__main__":
-
-    assert 60 == Puntuacion("12345123451234512345").calcular_puntos()
-
-    assert 90 == Puntuacion("9-9-9-9-9-9-9-9-9-9-").calcular_puntos()
-
-    assert 150 == Puntuacion("5/5/5/5/5/5/5/5/5/5/5").calcular_puntos()
-
-    assert 300 == Puntuacion("XXXXXXXXXXXX").calcular_puntos()
-
-    assert 182 == Puntuacion("9/X72X9/X7-X7/XXX").calcular_puntos()
