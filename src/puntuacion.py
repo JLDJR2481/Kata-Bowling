@@ -6,6 +6,7 @@ class Puntuacion:
     def __init__(self, points):
         self.points = list(points)
 
+    @staticmethod
     def specials_values(throws):
         total = 0
         for i in throws:
